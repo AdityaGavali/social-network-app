@@ -54,7 +54,7 @@ function Login() {
      
     </div>
     <hr />
-   <Link to='/signup' className='font-serif'>Don't have an account? Sign up</Link>
+   <Link to='/signup' className='font-serif'>Don't have an account? Register</Link>
    </div>
     </div>
   )
