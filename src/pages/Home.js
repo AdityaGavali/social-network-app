@@ -1,8 +1,13 @@
 import React from 'react'
+import DefaultLayout from '../components/DefaultLayout'
 
 function Home() {
   return (
-    <div className='bg-primary'>Home</div>
+     <DefaultLayout>
+     <div className='mt-0'>he</div>
+       <div>Home</div>
+     </DefaultLayout>
+    
   )
 }
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { Link, useNavigate } from 'react-router-dom'
 import { auth } from '../firebase';
@@ -25,7 +25,7 @@ function Signup() {
         email : user.email,
         profilepicUrl : '',
         About : 'Hi there , I am using SocialXpress'
-
+         
       }
       // addDoc(collection(db,'users') , userData);
       setDoc(doc(db,'users' , user.uid) , userData)
@@ -41,26 +41,31 @@ function Signup() {
  
   
   }
+  useEffect(()=>{
+    if(localStorage.getItem("SocialXpress")){
+      navigate('/')
+    }
+  })
   return (
-    <div className='h-screen text-center flex flex-col justify-center lg:flex-row gap-6 items-center  bg-gray '>
+    <div className='h-screen text-center flex md:flex-col justify-center flex-row gap-6 items-center  bg-bg '>
    {loading && <Loader/>}
    <div>
    <h1 className='text-primary font-bold text-4xl text-center font-serif '>SocialXpress</h1>
-      <h3 className='mr-6 text-2xl text-center animate-pulse font-serif'>Your Social World in One Place</h3>
+      <h3 className='mr-6 text-2xl text-secondary text-center animate-pulse font-serif'>Your Social World in One Place</h3>
      </div>
-   <div className='w-96 flex flex-col gap-4 card  max-w-md rounded-2xl overflow-hidden shadow-lg p-4 bg-secondary '>
-   <h1 className='font-serif text-2xl'>Enter Your details here</h1>
+   <div className='w-96 flex flex-col gap-4 card  max-w-md rounded-2xl overflow-hidden shadow-2xl border-y-light-gray border-y-8 p-4'>
+   <h1 className='font-serif text-2xl text-gray'>Let's Start 🚀 </h1>
     <hr className='mb-5' />
-    <input type="text" placeholder='Email' value={email} onChange={(e)=>{setemail(e.target.value)}} className=' pl-5 border-2 h-10 focus:border-primary rounded-sm '/>
-    <input type="password" placeholder='Password' value={password} onChange={(e)=>{setpassword(e.target.value)}} className='pl-5 border-2 h-10 focus:border-primary rounded-sm '/>
-    <input type="password" placeholder='Confirm Password'value={confirmpassword} onChange={(e)=>{setconfirmpassword(e.target.value)}}  className='pl-5 border-2 h-10 focus:border-primary rounded-sm '/>
+    <input type="text" placeholder='Email' value={email} onChange={(e)=>{setemail(e.target.value)}} className=' pl-5 border-2 h-10 focus:border-primary rounded-sm bg-gray '/>
+    <input type="password" placeholder='Password' value={password} onChange={(e)=>{setpassword(e.target.value)}} className='pl-5 border-2 h-10 focus:border-primary rounded-sm bg-gray'/>
+    <input type="password" placeholder='Confirm Password'value={confirmpassword} onChange={(e)=>{setconfirmpassword(e.target.value)}}  className='pl-5 border-2 h-10 focus:border-primary rounded-sm bg-gray '/>
     <div className='flex justify-center'>
      
-      <Button className=' bg-primary text-secondary w-28 h-10' onClick={register}>Register</Button>
+      <Button className=' bg-bg text-secondary w-28 h-10' onClick={register}>Register</Button>
     </div>
     <hr />
 
-   <Link to='/login' className='font-serif'>Already have an account? Login</Link>
+   <Link to='/login' className='font-serif text-left text-gray'>Already have an account? Login</Link>
    
    </div>
    
