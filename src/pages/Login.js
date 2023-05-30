@@ -22,6 +22,7 @@ function Login() {
      getDoc(doc(db,'users' , user.uid))
       .then((user) =>{
         localStorage.setItem('SocialXpress' , JSON.stringify({...user.data(), id  : user.id}))
+        navigate('/')
         toast.success("Login Successfull")
       })
       dispatch({type:'hideloading'})   
