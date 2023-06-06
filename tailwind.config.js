@@ -13,7 +13,8 @@ module.exports = {
         'gray':"#D3D3D3",
         'default-layout-bg':"#1a1a1b",
         'light-gray':"#D3D3D3",
-        'card-border':"#9b34eb"
+        'card-border':"#9b34eb",
+        'red':' #ff0000'
         
       },
       screens: {
