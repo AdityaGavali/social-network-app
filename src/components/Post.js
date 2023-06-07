@@ -2,6 +2,7 @@ import React from 'react'
 import {TfiCommentsSmiley} from 'react-icons/tfi'
 import {AiFillHeart ,AiFillDelete} from 'react-icons/ai'
 import { useNavigate } from 'react-router-dom'
+import { Button } from 'antd'
 function Post({post}) {
     const navigate = useNavigate()
     const getUserName = ()=>{
@@ -19,6 +20,7 @@ function Post({post}) {
     <div className='w-full text-center flex flex-col gap-4 max-w-sm overflow-hidden shadow-2xl'>
     <img src={post.imageURL} alt=""  className='h-50 w-60 mt-2'/>
     </div>
+    <div className='text-secondary font-serif text-center'>{post.Description}</div>
     <div className='p-2 flex text-light-gray text-xl justify-between items-center'>
     <div className='flex items-center gap-2'>
     <AiFillHeart/>
@@ -28,11 +30,12 @@ function Post({post}) {
  <TfiCommentsSmiley/>
  <h1>{post.comments.length}</h1>
  </div>
-  <AiFillDelete/>
+  
     </div>
     </div>
     </div>
   )
+  
 }
 
 export default Post

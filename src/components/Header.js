@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { HiMenuAlt1 } from "react-icons/hi";
 function Header() {
+  const user = JSON.parse(localStorage.getItem("SocialXpress"))
   const location = useLocation();
   const [showmenu, setshowmenu] = useState(false);
   const navigate = useNavigate()
@@ -14,14 +15,11 @@ function Header() {
       title: "➕Post",
       path: "/addpost",
     },
-    {
-      title: "📥Shares",
-      path: "/shares",
-    },
-    {
-      title: "😎Profile",
-      path: "/profile",
-    },
+    
+    // {
+    //   title: "😎Profile",
+    //   path: "/profile/${user.id}",
+    // },
   ];
   return (
     <div className="p-2   rounded-2xl bg-bg  ">
@@ -37,9 +35,11 @@ function Header() {
         </div>
       )}
       <div className=" flex items-center justify-between">
-        <h1 className="text-2xl px-2 font-bold font-serif text-secondary items-center">
+       <div> <h1 className="text-2xl px-2 font-bold font-serif text-secondary items-center">
           SocialXpress
         </h1>
+        <span className="text-secondary text-md p-3">{user.email.substring(0,user.email.length-10)}</span>
+        </div>
         {/* web view */}
         <div className="flex p-1 space-x-10 justify-end text-md font-serif text-secondary items-center md:hidden ">
           {menuItems.map((items) => {
