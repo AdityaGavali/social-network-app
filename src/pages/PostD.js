@@ -141,6 +141,7 @@ function PostD() {
                       className=" w-[500px] max-h-[500px]"
                     />
                   </div>
+                  <div className="text-secondary font-serif">{post.Description}</div>
                   <div className="p-2 flex text-light-gray text-xl justify-between items-center">
                     <div className="flex items-center gap-2">
                       <AiFillHeart

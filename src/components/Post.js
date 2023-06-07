@@ -17,7 +17,7 @@ function Post({post}) {
     <span className='h-8 w-8 text-center rounded-full bg-gray mr-3 text-xl '>{getUserName()[0]}</span>
   <span className='text-gray'>{getUserName()}</span>
     </div>
-    <div className='w-full text-center flex flex-col gap-4 max-w-sm overflow-hidden shadow-2xl'>
+    <div className='w-full max-h-36 text-center flex flex-col gap-4 max-w-sm overflow-hidden shadow-2xl'>
     <img src={post.imageURL} alt=""  className='h-50 w-60 mt-2'/>
     </div>
     <div className='text-secondary font-serif text-center'>{post.Description}</div>
