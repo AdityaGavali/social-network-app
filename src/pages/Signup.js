@@ -27,7 +27,7 @@ function Signup() {
         About : 'Hi there , I am using SocialXpress'
          
       }
-      // addDoc(collection(db,'users') , userData);
+      
       setDoc(doc(db,'users' , user.uid) , userData)
       dispatch({type:'hideloading'})
       toast.success("Registration Successfull")
@@ -47,10 +47,10 @@ function Signup() {
     }
   })
   return (
-    <div className='h-screen text-center flex md:flex-col justify-center flex-row gap-6 items-center  bg-bg '>
+    <div className='h-screen text-center flex md:flex-col justify-center flex-row gap-6 items-center bg-default-layout-bg'>
    {loading && <Loader/>}
    <div>
-   <h1 className='text-primary font-bold text-4xl text-center font-serif '>SocialXpress</h1>
+   <h1 className='text-gold font-bold text-4xl text-center font-serif '>SocialXpress</h1>
       <h3 className='mr-6 text-2xl text-secondary text-center animate-pulse font-serif'>Your Social World in One Place</h3>
      </div>
    <div className='w-96 flex flex-col gap-4 card  max-w-md rounded-2xl overflow-hidden shadow-2xl border-y-light-gray border-y-8 p-4'>
@@ -61,7 +61,7 @@ function Signup() {
     <input type="password" placeholder='Confirm Password'value={confirmpassword} onChange={(e)=>{setconfirmpassword(e.target.value)}}  className='pl-5 border-2 h-10 focus:border-primary rounded-sm bg-gray '/>
     <div className='flex justify-center'>
      
-      <Button className=' bg-bg text-secondary w-28 h-10' onClick={register}>Register</Button>
+      <Button className=' bg-bg text-secondary w-28 h-10' onClick={register}>REGISTER</Button>
     </div>
     <hr />
 

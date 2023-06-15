@@ -14,7 +14,8 @@ module.exports = {
         'default-layout-bg':"#1a1a1b",
         'light-gray':"#D3D3D3",
         'card-border':"#9b34eb",
-        'red':' #ff0000'
+        'red':' #ff0000',
+        'gold': '#FFD700'
         
       },
       screens: {
