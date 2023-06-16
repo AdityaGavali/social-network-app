@@ -1,4 +1,11 @@
-
+SocialXpress: Social Media Application 
+Tech Stack: React.js, Firebase Authentication, Firebase Database, Tailwind CSS, Redux.js
+Functionalities: 
+1. Registration
+2. Authentication
+3. Creating a post with an image and description
+4. Like and comment feature
+5. Friendly UI/UX 
 1. Login Page
    
 ![Screenshot (302)](https://github.com/AdityaGavali/social-network-app/assets/85026115/70b45023-42e4-4908-a1de-ffc2d3f25aa5)
