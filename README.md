@@ -6,8 +6,9 @@ Functionalities:
 1. Registration
 2. Authentication
 3. Creating a post with an image and description
-4. Like and comment feature
-5. Friendly UI/UX
+4. Responsive 
+5. Like and comment feature
+6. Friendly UI/UX
 <br/>
 1. Login Page
    
