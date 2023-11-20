@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import {getAuth} from 'firebase/auth'
 import {getFirestore}  from 'firebase/firestore'
 const firebaseConfig = {
-  apiKey: process.env.APIKEY,
-  authDomain: process.env.AUTH_DOMAIN,
-  projectId: process.env.PROJECT_ID,
-  storageBucket:process.env.STORAGE_BUCKET,
-  messagingSenderId: process.env.MSID,
-  appId: process.env.APPID
+  apiKey:"AIzaSyCj1dzpFet7IUhJ0h2UJdXTxDb2aDkuW04",
+  authDomain: "1:171126594714:web:42d67bcc52e5c2ff045323",
+  projectId: "social-media-d1790.firebaseapp.com",
+  storageBucket:"social-media-d1790",
+  messagingSenderId: "social-media-d1790.appspot.com",
+  appId: "171126594714"
 };
  const app = initializeApp(firebaseConfig);
  const auth = getAuth(app)
